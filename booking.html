@@ -1,0 +1,130 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="stl.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive Easy Car Hire Service</title>
+</head>
+<body>
+    <div class="container">
+    <nav style="margin-bottom: 20px;">
+        <a href="landingpage.html" class="home-link">Home</a> |
+       
+    </nav>
+</div>
+    <div class="container">
+        <h1>Drive Easy Car Hire Service</h1>
+        
+        <div class="section">
+            <h2>Hirer Information</h2>
+            <form id="hirerForm">
+                <div class="form-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="id">ID Number</label>
+                    <input type="text" id="id" required>
+                </div>
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" required min="18">
+                </div>
+                <div class="form-group">
+                    <label for="license">Driver License Number</label>
+                    <input type="text" id="license" required>
+                </div>
+                <div class="form-group">
+                    <label for="dateHired">Date Hired</label>
+                    <input type="date" id="dateHired" required>
+                </div>
+                <div class="form-group">
+                    <label for="periodHired">Period Hired (days)</label>
+                    <input type="number" id="periodHired" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="returnDate">Return Date</label>
+                    <input type="date" id="returnDate" readonly>
+                </div>
+                <div class="form-group">
+                    <label for="selectedCar">Selected Car</label>
+                    <select id="selectedCar" required>
+                        <option value="">-- Select a Car --</option>
+                        
+                    </select>
+                </div>
+                <button type="submit">Submit Hire Request</button>
+            </form>
+        </div>
+        
+        <div class="section">
+            <h2>Available Cars</h2>
+            <div class="cars-grid" id="carsGrid">
+                
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2>Current Hires</h2>
+            <table id="hiresTable">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Age</th>
+                        <th>License</th>
+                        <th>Car Model</th>
+                        <th>Reg Number</th>
+                        <th>Price/Day</th>
+                        <th>Date Hired</th>
+                        <th>Return Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="hiresTableBody">
+                
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="section">
+            <h2>Return Car</h2>
+            <form id="returnForm">
+                <div class="form-group">
+                    <label for="returnName">Hirer Name</label>
+                    <input type="text" id="returnName" required>
+                </div>
+                <div class="form-group">
+                    <label for="returnId">ID Number</label>
+                    <input type="text" id="returnId" required>
+                </div>
+                <div class="form-group">
+                    <label for="returnCar">Car Returned</label>
+                    <select id="returnCar" required>
+                        <option value="">-- Select Car --</option>
+                        
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Car Condition</label>
+                    <div>
+                        <label class="condition-option"><input type="radio" name="condition" value="excellent" required> Excellent</label>
+                        <label class="condition-option"><input type="radio" name="condition" value="good"> Good</label>
+                        <label class="condition-option"><input type="radio" name="condition" value="fair"> Fair</label>
+                        <label class="condition-option"><input type="radio" name="condition" value="damaged"> Damaged</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="damageDescription">Damage Description (if applicable)</label>
+                    <textarea id="damageDescription" rows="3" style="width: 100%;"></textarea>
+                </div>
+                <button type="submit">Process Return</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="scpt.js"> </script>
+</body>
+</html>
